@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>登录</title>
+      <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+     </script>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+</head>
+<style type="text/css">
+body{
+  background-color: #FF3900;
+}
+.main{
+  width: 16rem;
+  height: 25.2rem;
+  background-image: url(img/registerOk.png);
+  background-size: 16rem 25.2rem;
+  text-align: center;
+  overflow: hidden;
+}
+.main>p{
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+  margin-top: 6.725rem;
+}
+.main>a:nth-of-type(1){
+  display: block;
+  width: 14.0rem;
+  height: 2.125rem;
+  /*border-radius:1rem; */
+  color: #333333;
+  text-align: center;
+  line-height:2.125rem ;
+  font-size: 0.85rem;
+  background-image: url(img/btn1.png);
+  background-size: 14.0rem 2.125rem;
+  margin:0 auto;
+  margin-top: 4.25rem;
+}
+.main>a:nth-of-type(2){
+  display: block;
+  width: 14.0rem;
+  height: 2.125rem;
+  /*border-radius:1rem; */
+  color: #333333;
+  text-align: center;
+  line-height:2.125rem ;
+  font-size: 0.85rem;
+  background-image: url(img/btn1.png);
+  background-size: 14.0rem 2.125rem;
+  margin:0 auto;
+  margin-top: 0.75rem;
+}
+</style>
+	<body>
+	  <div class="main">
+	    <p>您已是银湖网注册会员</p>
+	    <a>下载App</a>
+	    <a>去投资</a>
+	  </div>
+	</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>登录</title>
+      <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+     </script>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+</head>
+<style type="text/css">
+.header{
+  width: 16rem;
+  height: 7.0rem;
+}
+.header>img{
+  width: 16rem;
+  height: 7.0rem;
+}
+.main{
+  width: 16rem;
+  min-height: 18.2rem;
+  background-color: #FFFFFF;
+}
+.mainForm{
+  padding: 0 1rem;
+}
+/*每一行*/
+.mainFormP{
+  height: 2.2rem;
+  border-bottom:0.025rem solid  #E2E3E3;
+  overflow: hidden;
+}
+.mainFormP>img{
+  display: block;
+  width: 0.7rem;
+  height: 0.8rem;
+  margin-top: 1rem;
+  float: left;
+  margin-left:0.6rem; 
+}
+.mainFormP>input{
+  display: block;
+  float: left;
+  font-size: 0.75rem;
+  height: 1rem;
+  width: 10rem;
+  margin-left: 0.65rem;
+  margin-top:0.8rem;
+  border: none; 
+  color: #333333;
+  border-radius: 0;
+}  
+.mainFormP .mainFormPYan{
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.mainFormP .mainFormPYan+input{
+  margin-left: 0.55rem;
+}
+.mainFormP .inputCaptcha{
+  width: 7.35rem;
+  border-right:0.05rem solid #E2E3E3;
+}
+.btn{
+  width: 13.925rem;
+  height: 1.975rem;
+  background-image: url(img/btn.png);
+  background-size: 13.925rem 1.975rem;
+  border-radius: 0.9rem;
+  margin-top: 2.5rem;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+}
+.zhuce{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: #666666;
+}
+.zhuceA{
+  color: #FE7B46;
+  font-weight:600 ;
+  font-size: 0.6rem;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 14rem;
+  height: 2.2rem;
+  border-top:0.025rem solid  #E2E3E3;
+  margin-left: 1rem;
+  text-align: center;
+  font-size: 0.55rem;
+  overflow: hidden;
+}
+.footer p>span{
+   display: inline-block;
+   vertical-align: top;
+}
+.footer p:nth-of-type(1){
+  margin-top: 0.425rem;
+  line-height: 0.5rem;
+   font-weight: 600;
+}
+.footer p:nth-of-type(1) span{
+  margin-left: 0.15rem;
+  color: #FE7740;
+  margin-top: 0.025rem;
+}
+.footer p:nth-of-type(2){
+  margin-top: 0.28rem;
+  font-size: 0.45rem;
+  line-height: 0.45rem;
+  color: #999999;
+}
+.footer p:nth-of-type(2) span{
+  margin-top: 0.09rem;
+}
+.footer img:nth-of-type(1){
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.55rem;
+}
+.footer img:nth-of-type(2){
+  display: inline-block;
+  width:0.4rem;
+  height: 0.425rem;
+}
+.spanCaptcha{
+  display: inline-block;
+  width: 3rem;
+  padding: 0.8rem 0 0.45rem 0.5rem;
+}
+.Captcha{
+  width: 2.775rem;
+  height: 1.075rem;
+}
+.spanYan{
+  display: inline-block;
+  color: #FE7740;
+  padding: 0.95rem 0 0.46rem 0.2rem;
+  font-size: 0.6rem;
+}
+</style>
+	<body>
+	  <div class="header">
+	  	 <img src="img/login.png"/>
+	  </div>
+	  <div class="main">
+	  	<form action="#" method="post" class="mainForm">
+	  	  <p class="mainFormP">
+	  	    <img src="img/iphone.png"/><input type="text" />
+	  	  </p>
+	  	  <p class="mainFormP">
+	  	    <img src="img/lock.png"/><input type="password" placeholder="请输入6-20位登录密码"/>
+	  	  </p>
+	  	  <p class="mainFormP">
+	  	    <img src="img/shield.png"/><input type="text" placeholder="请输入图形码" class="inputCaptcha"/><span class="spanCaptcha"><img src="img/Captcha.png" class="Captcha"/></span>
+	  	  </p>
+	  	  <p class="mainFormP">
+	  	    <img src="img/yan.png" class="mainFormPYan"/><input type="text" placeholder="请输入验证码" class="inputCaptcha"/><span class="spanYan">获取短信验证码</span>
+	  	  </p>
+	  	  <button class="btn">立即注册</button>
+	  	</form>
+	  	<p class="zhuce">
+	  	  <span>已有账户，去</span>
+	  	  <a href="#" class="zhuceA">登录</a>
+	  	</p>
+	  </div>
+	  <div class="footer">
+	  	<p>
+	  	  <img src="img/biao.png" /><span>上市公司安全保障</span>
+	  	</p>
+        <p>
+          <span>版权所有</span> <img  src="img/end.png"/> <span>银湖网络科技有限公司</span>
+        </p>
+	  </div>
+	</body>
+<script src="js/zepto.min.js"></script> 
+<script>
+
+</script>
+</html>

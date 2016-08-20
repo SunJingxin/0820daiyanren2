@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: #666666;
+}
+img{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+  padding: 0; 
+  color: #666666;
+}
+input{
+	outline: none;
+}
+button,input[type="submit"],input[type="button"]{
+  outline: none;
+  border: none;
+}
+body{
+  font-size:16px;
+  /*font: 15px/1.5 'Helvetica','Microsoft Yahei','arial';*/
+  font-family: Helvetica,STHeiti,Droid Sans Fallback;
+  background-color:#ffffff;
+}
+a,img,button,input,textarea{-webkit-tap-highlight-color:rgba(255,255,255,0);}

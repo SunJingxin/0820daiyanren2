@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>登录</title>
+      <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+     </script>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+</head>
+<style type="text/css">
+
+body{
+  background-color: #FF3900;
+}
+.main{
+  width: 16rem;
+  min-height: 25.2rem;
+  background-image: url(img/huod.png);
+  background-size: 16rem 25.2rem;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.header{
+  font-size:0 ;
+  margin:0 auto;
+  min-height:1rem;
+  width: 15rem;
+  margin-top:1.25rem ;
+}
+.header li{
+  display: inline-block;
+  width: 4.9rem;
+  height: 1.4rem;
+  border: 0.05rem solid #ffffff;
+  font-size: 0.65rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.4rem;
+}
+.header .headerLi{
+  background-color: #FFFFFF;
+  color: #FF3900;
+}
+/*下边部分*/
+.content{
+  width: 16rem;
+  min-height: 22.45rem;
+  overflow: hidden;
+}
+/*邀友拿奖励*/
+.invite{
+  position: relative;
+  width: 16rem;
+  height: 22.45rem;
+  background-image: url(img/invite.png);
+  background-size: 16rem 22.45rem;
+  display: none;
+}
+.btn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 9rem;
+  height: 3.4rem;
+  margin-left:3.5rem;
+  border-radius:3.4rem 3.4rem 0 0  ;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  line-height: 4.1rem;
+  font-weight:600 ;
+}
+/*奖励规则*/
+.award{
+  width: 16rem;
+  height: 24.575rem;
+  overflow: hidden;  
+  /*display: none;*/  
+}
+.award1{
+  width: 15.0rem;
+  height: 23.075rem;
+  background-color: #ffffff;
+  margin:0 auto;	
+  margin-top:0.75rem;  
+}
+.award1>p:nth-of-type(1){
+  color: #666666;
+  font-size: 0.6rem;
+  padding:1.175rem 0 0 0.525rem; 
+}
+.award1>p:nth-of-type(2){
+  color: #666666;
+  font-size: 0.7rem;
+  padding:0.75rem 0 0 0.525rem; 
+}
+.award1>p:nth-of-type(2)>span:nth-of-type(1) {
+  display: inline-block;
+  width: 3.4rem;
+  height: 1.3rem;
+  background-color: #FF5400;
+  border-radius: 0.7rem;
+  color: #ffffff;
+  line-height: 1.3rem;
+  text-align: center;
+}
+.table{
+  width: 13.95rem;
+  height: 7.825rem;
+  border: 0.025rem solid #666666;
+  margin: 0 auto; 
+  margin-top:1.825rem; 
+  border-radius: 0.125rem; 
+  position: relative;
+}
+.table tr{
+  background-color: #666666;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #FFFFFF;
+}
+.table tr:nth-of-type(1){
+  height: 0.65rem;
+}
+.table tr:nth-of-type(2){
+  height: 1.075rem;
+  /*background-color: #FFA000;*/
+  text-align: center;
+  width: 13.95rem;
+  font-size: 0.6rem;
+  color: #ffffff;
+  display: block;
+  position:absolute;
+  top: 0.65rem;
+  left: -0.025rem;
+  top: 10rem;
+}
+
+/*邀请记录*/
+.record{
+  padding:0 0.5rem;
+  height: 31.95rem;
+  display: none;
+}
+.recordP{
+  color: #FFFFFF;
+  font-size: 0.45rem;
+  line-height: 1.5rem;
+  height: 1.5rem;
+}
+.total{
+  width: 100%;
+  height: 6.35rem;
+  background-color: #ffffff;
+}
+.money{
+  width: 100%;
+  min-height: 23.2rem;
+  background-color: #ffffff;
+  margin-top: 0.2rem;
+}
+</style>
+	<body>
+	  <div class="main">
+	    <ul class="header">
+	      <li class="headerLi">邀友拿奖励</li>
+	      <li>奖励规则</li>
+	      <li>邀请记录</li>
+	    </ul>
+	    <ul class="content">
+<!--邀友拿奖励-->	    	
+	    	<li class="invite">
+	    	  <a class="btn">立即邀请</a>
+	    	</li>
+<!--奖励规则-->
+	    	<li class="award">
+	    	  <div class="award1">
+	    	  	<p>奖励计算公式</p>
+	    	  	<p>
+	    	  	  <span>奖励金额</span>
+	    	  	  <span>=好友年化投资金额*1%</span>
+	    	  	</p>
+	    	  	<table border="0" cellspacing="0" cellpadding="0" class="table">
+	    	  		<tr>
+	    	  		  <td></td><td></td>
+	    	  		</tr>
+	    	  		<tr>
+	    	  		  <td colspan="2">好友投资10000元</td>
+	    	  		</tr>
+	    	  		<tr>
+	    	  			<td>期限</td>
+	    	  			<td>奖励金额</td>
+	    	  		</tr>
+	    	  		<tr>
+	    	  			<td>6个月</td>
+	    	  			<td>10000/12*6*1%=50</td>
+	    	  		</tr>
+	    	  		<tr>
+	    	  			<td>99天</td>
+	    	  			<td>10000、365*99*1%=27.12</td>
+	    	  		</tr>
+	    	  		<!--<div>举个例子</div>-->
+	    	  	</table>
+	    	    <p>注意事项</p>
+	    	    <p>1.仅限好友加入银聚宝;</p>
+	    	    <p>2.奖励以现金形式于次月10日发送至推荐人的银湖网账户中;</p>
+	    	    <p>3.周期≥1年，年化投资金额=投资金额;</p>
+	    	    <p>4.好友注册成功一年内，多次购买，推荐人多次获得奖励，一年后购买将不再享有奖励。</p>
+	    	  </div>
+	    	</li>
+<!--邀请记录-->
+	    	<li class="record">
+	    	  <p class="recordP">*为保证推荐奖励顺利发放，请您开通汇付天下账户</p>
+              <ul class="total">
+                  <li>
+                      <p>22,000.00</p>
+                      <p>待发送奖励（元）</P>
+                  </li>
+                  <li>
+                      <p>10,000.00</p>
+                      <p>已发放奖励（元）</P>
+                      <p>10,000</p>
+                      <p>好友投资总额（元）</P>
+                  </li>
+              </ul>
+              <div class="money">
+                <ul class="moneyHeader">
+                    <li>
+                                           好友
+                    </li>
+                    <li>
+                    	投资金额（元）
+                    </li>
+                    <li>
+                    	推荐奖励（元）
+                    </li>
+                </ul>
+                <ul class="moneyMain">
+                    <li>
+                      <ul>
+                      	<li>123***456</li>
+                      	<li>11,255,000</li>
+                      	<li>8.25</li>
+                      </ul>
+                      <p>
+                      	<span>注册时间:</span>
+                      	<span>2016/06/14</span>
+                      </p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+              </div>
+	    	</li>
+	    </ul>
+	  </div>
+	</body>
+<script src="js/zepto.min.js"></script>
+<script>
+  // 头部样式的切换
+  $(".header li").tap(function(e){
+  	$(".header li").each(function(ind,ele){
+	  ele.className="";
+  	})
+	e.target.className="headerLi";
+	//切换内容部分
+	$(".content li").each(function(ind,ele){
+	  ele.style.display="none";
+	  $(".content li")[$(e.target).index()].style.display="block";
+	})
+  })
+  //
+</script>
+</html>
