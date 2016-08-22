@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>登录</title>
+      <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement;
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = (clientWidth/16).toFixed(1) + 'px';
+            };
+            recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+        //640px时1rem是40px
+     </script>
+     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+</head>
+<style type="text/css">
+  .tanOk{
+    width: 16rem;
+    height: 25.2rem;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .tanOk .shu{
+    width: 0.05rem;
+    height: 6.7rem;
+    background-color:#FFE438;
+    margin: 0 auto; 
+    position: relative; 
+  }
+  .tanOk .top{
+    width: 11.85rem;
+    height: 2.325rem;
+    background-color: #FF7200;
+    border-radius: 0.35rem 0.35rem 0 0;
+    margin: 0 auto; 
+    color: #ffffff;
+    text-align: center;
+    line-height: 2.325rem;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 999;
+  }
+   .tanOk .left{
+     position: absolute;
+     top: 7.875rem;
+     left:-6.38rem;
+   	 width: 0.825rem;
+     height: 1.5rem;
+     z-index: 1;
+   } 
+   .tanOk .right{
+     position: absolute;
+     top: 7.875rem;
+     left:5.6rem;
+   	 width: 0.825rem;
+     height: 1.5rem;
+     z-index: 1;
+   }
+  .tanOk .tan{
+    width: 11.2rem;
+    height: 6.8rem;
+    background-color: #ffffff;
+    border-radius: 0 0 0.325rem 0.325rem;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
+  }
+  .tanOk .tan>p{
+    color: #666666;
+    font-size: 0.7rem;
+    margin-top:1.375rem; 
+  }
+  .tanOk .tan>a{
+    display: block;
+    width: 7.5rem;
+    height:2.025rem;
+    background-image: url(img/tanOk.png);
+    background-size: 7.5rem 2.025rem;
+    text-align: center;
+    line-height:2.025rem ;
+    margin: 0 auto;
+    margin-top:1.5rem;
+    font-size: 0.80rem;
+    color: #333333; 
+  }
+</style>
+	<body>
+	  <div class="tanOk">
+	    <div class="shu">
+        <img src="img/left.png" class="left">
+        <img src="img/right.png" class="right"> 
+      </div>
+	    <div class="top">
+        注册成功 
+      </div>
+      <div class="tan">
+        <p>邀请好友获得更多奖励</p>
+        <a href="#">知道了</a>
+      </div>
+	  </div>
+	</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>登录</title>
+    <title>立即注册</title>
       <script>
         (function (doc, win) {
             var docEl = doc.documentElement;
@@ -35,16 +35,16 @@
   min-height: 18.2rem;
   background-color: #FFFFFF;
 }
-.mainForm{
+.mainForm2{
   padding: 0 1rem;
 }
 /*每一行*/
-.mainFormP{
+.mainForm2 .mainFormP{
   height: 2.2rem;
   border-bottom:0.025rem solid  #E2E3E3;
   overflow: hidden;
 }
-.mainFormP>img{
+.mainForm2 .mainFormP>img{
   display: block;
   width: 0.7rem;
   height: 0.8rem;
@@ -52,7 +52,7 @@
   float: left;
   margin-left:0.6rem; 
 }
-.mainFormP>input{
+.mainForm2 .mainFormP>input{
   display: block;
   float: left;
   font-size: 0.75rem;
@@ -64,14 +64,14 @@
   color: #333333;
   border-radius: 0;
 }  
-.mainFormP .mainFormPYan{
+.mainForm2 .mainFormP .mainFormPYan{
   width: 0.8rem;
   height: 0.8rem;
 }
-.mainFormP .mainFormPYan+input{
+.mainForm2 .mainFormP .mainFormPYan+input{
   margin-left: 0.55rem;
 }
-.mainFormP .inputCaptcha{
+.mainForm2 .mainFormP .inputCaptcha{
   width: 7.35rem;
   border-right:0.05rem solid #E2E3E3;
 }
@@ -98,16 +98,14 @@
   font-size: 0.6rem;
 }
 .footer{
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 14rem;
   height: 2.2rem;
   border-top:0.025rem solid  #E2E3E3;
-  margin-left: 1rem;
   text-align: center;
   font-size: 0.55rem;
   overflow: hidden;
+  margin:0 auto;  
+   margin-top:1.3rem;
 }
 .footer p>span{
    display: inline-block;
@@ -163,7 +161,7 @@
 	  	 <img src="img/login.png"/>
 	  </div>
 	  <div class="main">
-	  	<form action="#" method="post" class="mainForm">
+	  	<form action="#" method="post" class="mainForm2">
 	  	  <p class="mainFormP">
 	  	    <img src="img/iphone.png"/><input type="text" />
 	  	  </p>
@@ -182,14 +180,14 @@
 	  	  <span>已有账户，去</span>
 	  	  <a href="#" class="zhuceA">登录</a>
 	  	</p>
-	  </div>
-	  <div class="footer">
-	  	<p>
-	  	  <img src="img/biao.png" /><span>上市公司安全保障</span>
-	  	</p>
-        <p>
-          <span>版权所有</span> <img  src="img/end.png"/> <span>银湖网络科技有限公司</span>
-        </p>
+	    <div class="footer">
+	  	  <p>
+	  	    <img src="img/biao.png" /><span>上市公司安全保障</span>
+	   	  </p>
+          <p>
+            <span>版权所有</span> <img  src="img/end.png"/> <span>银湖网络科技有限公司</span>
+          </p>
+	    </div>
 	  </div>
 	</body>
 <script src="js/zepto.min.js"></script> 

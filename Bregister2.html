@@ -141,6 +141,35 @@ body{
   margin-top: 0.75rem;
   background-color: rgba(0,0,0,0);
 }
+.verificationOk{
+  position: absolute;
+  top: 10.125rem;
+  left: 2.5rem;
+  width:11rem;
+  height: 2.1rem;
+  text-align: center;
+}
+.verificationOk .phoneVerification,
+.verificationOk .tuVerification,
+.verificationOk .passworldV
+{
+  display: block;
+  width: 6.5rem;
+  height: 1.75rem;
+  text-align: center;
+  line-height: 1.75rem;
+  color: #ffffff;
+  font-size: 0.6rem;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 0.325rem;
+  margin: 0 auto; 
+}
+.verificationOk .tuVerification{
+  width: 7.7rem;
+}
+.verificationOk .passworldV{
+  width: 10.7rem;
+}
 </style>
 	<body>
 	  <div class="main">
@@ -167,6 +196,17 @@ body{
 	      </p>
 	      <button class="btn"> 下一步</button>
 	    </form>
+	     <div class="verificationOk">
+	  	  <div class="phoneVerification">
+	  	     请输入正确的手机号
+	  	  </div>
+	  	  <div class="passworldV">
+	  	       密码须为6-20位字母、数字或符号
+	  	  </div>
+	  	  <div class="tautologyV">
+	  	      您发送过于频繁，请稍后再试
+	  	  </div>
+	    </div>
 	  </div>
 	</body>
 </html>

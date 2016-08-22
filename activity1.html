@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>登录</title>
+    <title>银湖网代言人</title>
       <script>
         (function (doc, win) {
             var docEl = doc.documentElement;
@@ -39,11 +39,16 @@ body{
   margin:0 auto;
   min-height:1rem;
   width: 15rem;
-  margin-top:1.25rem ;
+  position: fixed;
+  top: 1.25rem;
+  left: 0.5rem;
+  z-index: 999;
+  background-color: #FF5900;
+  display: flex;
 }
 .header li{
   display: inline-block;
-  width: 4.9rem;
+  width: 33.3%;
   height: 1.4rem;
   border: 0.05rem solid #ffffff;
   font-size: 0.65rem;
@@ -57,6 +62,7 @@ body{
 }
 /*下边部分*/
 .content{
+  margin-top:2.75rem; 
   width: 16rem;
   min-height: 22.45rem;
   overflow: hidden;
@@ -68,7 +74,7 @@ body{
   height: 22.45rem;
   background-image: url(img/invite.png);
   background-size: 16rem 22.45rem;
-  display: none;
+  /*display: none;*/
 }
 .btn{
   position: absolute;
@@ -90,7 +96,7 @@ body{
   width: 16rem;
   height: 24.575rem;
   overflow: hidden;  
-  /*display: none;*/  
+  display: none;  
 }
 .award1{
   width: 15.0rem;
@@ -99,6 +105,7 @@ body{
   margin:0 auto;	
   margin-top:0.75rem;  
 }
+/*设置圆角*/
 .award1>p:nth-of-type(1){
   color: #666666;
   font-size: 0.6rem;
@@ -122,40 +129,76 @@ body{
 .table{
   width: 13.95rem;
   height: 7.825rem;
-  border: 0.025rem solid #666666;
   margin: 0 auto; 
   margin-top:1.825rem; 
-  border-radius: 0.125rem; 
+  border-radius: 0.15rem; 
   position: relative;
+  background-color: #666666;
+}
+.tableDiv{
+  width: 5.175rem;
+  height: 1.25rem;
+  background-image: url(img/tableDiv.png);
+  background-size: 5.175rem 1.25rem;
+  position: absolute;
+  top: 8.45rem;
+  left: 5.425rem;
+  z-index: 9;
+  color: #FFFFFF;
+  text-align: center;
+  line-height:1.25rem ;
 }
 .table tr{
-  background-color: #666666;
+  background-color: #FFFFFF;
   text-align: center;
   font-size: 0.6rem;
-  color: #FFFFFF;
+  color: #666666;
 }
+.table tr td:nth-of-type(1){
+  width: 4.475rem;
+}
+/*设置行高*/
 .table tr:nth-of-type(1){
   height: 0.65rem;
 }
 .table tr:nth-of-type(2){
-  height: 1.075rem;
-  /*background-color: #FFA000;*/
+  height: 1.175rem;
+  background-color: #FFA000;
   text-align: center;
-  width: 13.95rem;
   font-size: 0.6rem;
   color: #ffffff;
-  display: block;
-  position:absolute;
-  top: 0.65rem;
-  left: -0.025rem;
-  top: 10rem;
+  text-align: center;
+}
+.table tr:nth-of-type(1) td{
+  border-radius:0.125rem 0.125rem 0 0;
+}
+.table tr:last-child  td:nth-of-type(1){
+  border-radius:0 0 0 0.125rem;
+}
+.table tr:last-child  td:nth-of-type(2){
+  border-radius:0 0 0.125rem 0;
+}
+
+.awardp0{
+  font-size: 0.6rem;
+  color: #666666;
+  height: 2.425rem;
+  padding-left:0.625rem; 
+  line-height: 2.6rem;
+}
+.awardp{
+  font-size: 0.6rem;
+  color: #666666;
+  padding-left:0.625rem; 
+  line-height: 1.025rem; 
 }
 
 /*邀请记录*/
 .record{
   padding:0 0.5rem;
-  height: 31.95rem;
+  min-height: 1.95rem;
   display: none;
+
 }
 .recordP{
   color: #FFFFFF;
@@ -167,12 +210,130 @@ body{
   width: 100%;
   height: 6.35rem;
   background-color: #ffffff;
+  overflow: hidden;
 }
+.totalLi1{
+  display:block;
+  float: left;
+  width: 8.05rem;
+  height: 5.0rem;
+  margin-top: 0.825rem;
+  text-align: center;
+  overflow: hidden;
+}
+.totalLi1 p:nth-of-type(1){
+  color: #FF1500;
+  font-size: 1.25rem;
+  margin-top:1rem; 
+}
+.totalLi1 p:nth-of-type(2){
+  color: #666666;
+  font-size: 0.7rem;
+  margin-top:0.7rem; 
+}
+.totalLi2{
+  display: block;
+  float: left;
+  margin-top: 0.825rem;
+  font-size: 0.6rem;
+  text-align: center;
+  width: 6.9rem;
+  color: #666666;
+}
+.totalLi2 p:nth-of-type(2){
+  margin-top: 0.4rem;
+}
+.totalLi2 p:nth-of-type(3){
+  margin-top: 0.8rem;
+}
+.totalLi2 p:nth-of-type(4){
+  margin-top: 0.4rem;
+}
+/*好友列表部分*/
 .money{
   width: 100%;
   min-height: 23.2rem;
   background-color: #ffffff;
   margin-top: 0.2rem;
+}
+.zhan{
+  height: 0.75rem;
+}
+.moneyHeader{
+  padding-top: 0.45rem;
+  margin: 0 0.5rem;
+  height:  1.2rem;
+  line-height: 1.2rem;
+  border-bottom: 0.025rem dashed #D8D8D8;  
+  color: #666666;
+  font-size: 0;
+}
+.moneyHeader li:nth-of-type(1){
+  float: left;
+  font-size:0.6rem;
+  width:4.025rem;
+  padding-left: 1.0rem;
+}
+.moneyHeader li:nth-of-type(2){
+  float: left;
+  font-size:0.6rem;
+  width:4.5rem;
+}
+.moneyHeader li:nth-of-type(3){
+  float: right;
+  font-size:0.6rem;
+}
+.moneyMainLi{
+  margin: 0 0.5rem;
+  height: 3.0rem;
+  border-bottom: 0.025rem dashed #D8D8D8; 
+  color: #666666;
+}
+.moneyMainLi>ul{
+  font-size: 0.55rem;
+  line-height: 0.55rem;
+}
+.moneyMainLi>ul>li:nth-of-type(1){
+  display:block;
+  float: left;
+  width:5.1rem;
+  text-align: left;
+  padding-top:1.075rem;
+  padding-left:0.025rem;  
+}
+.moneyMainLi>ul>li:nth-of-type(2){
+  display:block;
+  float: left;
+  width: 4.5rem;
+  text-align: left;
+  padding-top:1.075rem; 
+}
+.moneyMainLi>ul>li:nth-of-type(3){
+  display:block;
+  float: right;
+  text-align: center;
+  padding-top:1.075rem; 
+  width: 4.2rem;
+}
+.moneyMainLi>p{
+  float: left;
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  margin-top:0.625rem; 
+}
+.share{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  width: 16rem;
+  height: 25.2rem;
+  z-index: 999;
+  display: none;
+}
+.share>img{
+  width: 16.0rem;
+  height: 7.85rem;
 }
 </style>
 	<body>
@@ -195,9 +356,9 @@ body{
 	    	  	  <span>奖励金额</span>
 	    	  	  <span>=好友年化投资金额*1%</span>
 	    	  	</p>
-	    	  	<table border="0" cellspacing="0" cellpadding="0" class="table">
+	    	  	<table border="0" cellspacing="1" cellpadding="0" class="table">
 	    	  		<tr>
-	    	  		  <td></td><td></td>
+	    	  		  <td colspan="2"></td>
 	    	  		</tr>
 	    	  		<tr>
 	    	  		  <td colspan="2">好友投资10000元</td>
@@ -214,24 +375,25 @@ body{
 	    	  			<td>99天</td>
 	    	  			<td>10000、365*99*1%=27.12</td>
 	    	  		</tr>
-	    	  		<!--<div>举个例子</div>-->
+	    	  	 
 	    	  	</table>
-	    	    <p>注意事项</p>
-	    	    <p>1.仅限好友加入银聚宝;</p>
-	    	    <p>2.奖励以现金形式于次月10日发送至推荐人的银湖网账户中;</p>
-	    	    <p>3.周期≥1年，年化投资金额=投资金额;</p>
-	    	    <p>4.好友注册成功一年内，多次购买，推荐人多次获得奖励，一年后购买将不再享有奖励。</p>
+	    	  	<div class="tableDiv">举个例子</div>	
+	    	    <p class="awardp0">注意事项</p>
+	    	    <p class="awardp">1.仅限好友加入银聚宝;</p>
+	    	    <p class="awardp">2.奖励以现金形式于次月10日发送至推荐人的银湖网账户中;</p>
+	    	    <p class="awardp">3.周期≥1年，年化投资金额=投资金额;</p>
+	    	    <p class="awardp">4.好友注册成功一年内，多次购买，推荐人多次获得奖励，一年后购买将不再享有奖励。</p>
 	    	  </div>
 	    	</li>
 <!--邀请记录-->
 	    	<li class="record">
 	    	  <p class="recordP">*为保证推荐奖励顺利发放，请您开通汇付天下账户</p>
               <ul class="total">
-                  <li>
+                  <li class="totalLi1">
                       <p>22,000.00</p>
                       <p>待发送奖励（元）</P>
                   </li>
-                  <li>
+                  <li class="totalLi2">
                       <p>10,000.00</p>
                       <p>已发放奖励（元）</P>
                       <p>10,000</p>
@@ -251,9 +413,9 @@ body{
                     </li>
                 </ul>
                 <ul class="moneyMain">
-                    <li>
+                    <li class="moneyMainLi">
                       <ul>
-                      	<li>123***456</li>
+                      	<li>123*****456</li>
                       	<li>11,255,000</li>
                       	<li>8.25</li>
                       </ul>
@@ -262,32 +424,90 @@ body{
                       	<span>2016/06/14</span>
                       </p>
                     </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="moneyMainLi">
+                      <ul>
+                        <li>123***456</li>
+                        <li>11,255,000</li>
+                        <li>8.25</li>
+                      </ul>
+                      <p>
+                        <span>注册时间:</span>
+                        <span>2016/06/14</span>
+                      </p>
+                    </li>                                                                                    <li class="moneyMainLi">
+                      <ul>
+                        <li>123***456</li>
+                        <li>11,255,000</li>
+                        <li>8.25</li>
+                      </ul>
+                      <p>
+                        <span>注册时间:</span>
+                        <span>2016/06/14</span>
+                      </p>
+                    </li>
+                    <li class="moneyMainLi">
+                      <ul>
+                        <li>123***456</li>
+                        <li>11,255,000</li>
+                        <li>8.25</li>
+                      </ul>
+                      <p>
+                        <span>注册时间:</span>
+                        <span>2016/06/14</span>
+                      </p>
+                    </li>
+                    <li class="moneyMainLi">
+                      <ul>
+                        <li>123***456</li>
+                        <li>11,255,000</li>
+                        <li>8.25</li>
+                      </ul>
+                      <p>
+                        <span>注册时间:</span>
+                        <span>2016/06/14</span>
+                      </p>
+                    </li>                                      
+<!--动态添加好友投资信息-->
                 </ul>
               </div>
+              <!--为撑开父容器-->
+              <div class="zhan"></div>
 	    	</li>
 	    </ul>
+	  </div>
+	  <div class="share">
+	    <img src="img/share.png" />
 	  </div>
 	</body>
 <script src="js/zepto.min.js"></script>
 <script>
   // 头部样式的切换
-  $(".header li").tap(function(e){
-  	$(".header li").each(function(ind,ele){
+  $(".header>li").tap(function(e){
+  	$(".header>li").each(function(ind,ele){
 	  ele.className="";
   	})
 	e.target.className="headerLi";
 	//切换内容部分
-	$(".content li").each(function(ind,ele){
+	$(".content>li").each(function(ind,ele){
 	  ele.style.display="none";
-	  $(".content li")[$(e.target).index()].style.display="block";
+	  $(".content>li")[$(e.target).index()].style.display="block";
+	  //切换到顶部
+      $("html,body").scrollTop(0);
+      
 	})
   })
-  //
+  //邀友拿奖励 点击分享，点击取消
+  $(".btn").tap(function(){
+  	$(".share").css("display","block")
+  })
+  //可以不设置取消分享 // 双击取消
+  $(".share").doubleTap(function(e){
+    if(e.target.className!="share"){
+      var fenx=e.target.parentNode;
+    }else{
+      var fenx=e.target;
+    }
+    fenx.style.display="none";
+  })
 </script>
 </html>
